@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Ubuntu:wght@300;400;500&display=swap');
+
+
+.HomeHeader {
+    z-index: 10;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+.HomeHeader p {
+    margin-top: -50px;
+    transition: all .2s ease-in-out;
+}
+
+.HomeHeader h1 {
+    color: #000;
+    font-size: 10em;
+    font-weight: 300;
+    margin-top: -10px;
+    font-family: 'Gideon Roman', cursive;
+    transition: all .2s ease-in-out;
+}
+
+.HomeHeader p {
+    color: #41a0d9;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: -3;
+    transition: all .2s ease-in-out;
+}
+
+#tsparticles {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+.ScrollDownDiv {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-size: 3em;
+    bottom: 20px; 
+    animation: ScrollDown 2s ease-in-out infinite;
+}
+
+.ScrollDownDiv a {
+    color: rgb(49, 38, 38);
+    text-decoration: none;
+}
+
+
+@keyframes ScrollDown {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-50px);} 
+    60% {transform: translateY(-15px);} 
+}
+
+
+@media screen and (max-width: 1500px) {
+
+    .HomeHomeHeader {
+
+        transition: all .2s ease-in-out;
+    }
+
+    .HomeHeader h1 {
+        font-size: 8em;
+        transition: all .2s ease-in-out;
+        text-shadow: 4px 4px #41a0d9;
+    }
+
+    .HomeHeader p {
+        font-size: 3em;
+        transition: all .2s ease-in-out;
+    }
+}
+
+
+@media screen and (max-width: 1170px) {
+
+    .HomeHeader {
+
+        transition: all .2s ease-in-out;
+    }
+
+    .HomeHeader h1 {
+        font-size: 6em;
+        transition: all .2s ease-in-out;
+        text-shadow: 3px 3px #41a0d9;
+    }
+
+    .HomeHeader p {
+        font-size: 2.5em;
+        transition: all .2s ease-in-out;
+        margin-top: -60px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .HomeHeader {
+        transition: all .2s ease-in-out;
+    }
+
+    .HomeHeader h1 {
+        font-size: 5em;
+        transition: all .2s ease-in-out;
+        text-shadow: 2.5px 2.5px #41a0d9;
+    }
+
+    .HomeHeader p {
+        font-size: 1.5em;
+        transition: all .2s ease-in-out;
+        margin-top: -40px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .HomeHeader {
+
+        transition: all .2s ease-in-out;
+    }
+
+    .HomeHeader h1 {
+        font-size: 4em;
+        transition: all .2s ease-in-out;
+        text-shadow: 1px 1px #41a0d9;
+    }
+
+    .HomeHeader p {
+        font-size: 2em;
+        transition: all .2s ease-in-out;
+        margin-top: -16px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .HomeHeader {
+
+        transition: all .2s ease-in-out;
+    }
+
+    .HomeHeader h1 {
+        font-size: 4em;
+        text-align: center;
+        transition: all .2s ease-in-out;
+        text-shadow: 1px 1px #41a0d9;
+    }
+
+    .HomeHeader p {
+        font-size: 1.7em;
+        transition: all .2s ease-in-out;
+        margin-top: -16px;
+    }
+}

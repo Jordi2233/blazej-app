@@ -1,0 +1,44 @@
+.NavItem a{
+    text-decoration: none;
+    color: hsl(60,4%,13%);
+    font-size: 1.1em;
+}
+
+
+
+.NavItem {
+    --text: hsl(228, 23%, 22%);
+    --line: hsl(231, 39%, 81%);
+    --line-active: hsl(203,67%,55%);
+}
+
+.NavItem a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 var(--spacing, 0px);
+    transition: margin 0.25s;
+}
+.NavItem a svg {
+    width: 76px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 7px) translateZ(0);
+    fill: none;
+    stroke: var(--stroke, var(--line));
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke-dasharray: var(--offset, 69px) 278px;
+    stroke-dashoffset: 361px;
+    transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
+}
+.NavItem a:hover {
+    --spacing: 4px;
+    --stroke: var(--line-active);
+    --stroke-delay: 0.1s;
+    --offset: 180px;
+}
+
