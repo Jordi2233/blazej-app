@@ -6,7 +6,7 @@ import WorksItem from "./WorksItems"
 const Work = () => {
     
     return (
-        <div className="Work" id="Work">
+        <div className="Work" id="Works">
 
             <div className="WorkGrid"></div>
             <div className="WorkHeader">
@@ -19,6 +19,8 @@ const Work = () => {
                     demo={item.demo}
                     git={item.github}
                     src={item.img}
+                    tech={item.tech.map((tech) => {return(<p>{tech}</p>)})}
+                    color={item.color}
                     key={item.id}
                     />
                 })}

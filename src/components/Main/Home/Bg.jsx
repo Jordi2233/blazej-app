@@ -1,45 +1,29 @@
 import React from 'react';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import useWindowSize from "../../ScreenResolution"
+import useWindowSize from "../../../ScreenResolution"
 
 
-const Bg = () => {
+const Bg = (props) => {
 
     const size = useWindowSize().width;
 
 const options = {
-    
         "autoPlay": true,
         "background": {
         "color": {
-        "value": "#fefaf6"
-        },
-        "image": "",
-        "position": "50% 50%",
-        "repeat": "no-repeat",
-        "size": "cover",
-        "opacity": 1
-        },
-        "backgroundMask": {
-        "composite": "destination-out",
-        "cover": {
-        "color": {
-        "value": "#000"
+        "value": "transparent"
         },
         "opacity": 1
         },
-        "enable": false
-        },
-        "fullScreen": {
-        "enable": false,
-        "zIndex": -1
-        },
+        // "fullScreen": {
+        // "enable": false,
+        // "zIndex": -1
+        // },
           "particles": {
-        
             "fpsLimit": 100,
             "number": {
-               "value": size < 800 ? 150 : 400,
+               "value": props.value,
               "density": {
                 "enable": false
               }
@@ -64,21 +48,21 @@ const options = {
               }
             },
             "size": {
-              "value": size > 800 ? 5 : 3,
+              "value":  3,
               "random": true,
               "anim": {
                 "enable": false,
-                "speed": size < 800 ? 15 : 40,
+                "speed": size < 600 ? 15 : 40,
                 "sizeMin": 0.1,
                 "sync": false
               }
             },
             "lineLinked": {
               "enable": true,
-              "distance": 80,
+              "distance": size < 600 ? 55 : 80,
               "color": "#000000",
-              "opacity": 0.2,
-              "width": size < 800 ? 0.5 : 1
+              "opacity": 0.1,
+              "width": 1
             },
             "move": {
               "enable": true,
@@ -86,7 +70,7 @@ const options = {
               "direction": "none",
               "random": true,
               "straight": false,
-              "outMode": "out",
+              "outMode": "bounce",
               "bounce": true
             }
           },
@@ -98,14 +82,14 @@ const options = {
                 "mode": "grab"
               },
               "onClick": {
-                "enable": size < 800 ? false : true,
+                "enable": size < 600 ? false : true,
                 "mode": "grab"
               },
               "resize": true
             },
             "modes": {
               "grab": {
-                "distance": size < 800 ? 130 : 100,
+                "distance": size < 600 ? 100 : 100,
                 "lineLinked": {
                   "opacity": 0.5,
                   "width": 1

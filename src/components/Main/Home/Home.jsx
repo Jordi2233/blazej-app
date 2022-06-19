@@ -3,19 +3,23 @@ import Bg from "./Bg";
 import "./Home.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-
+import useWindowSize from "../../../ScreenResolution";
 
 
 
 const Home = () => {
 
+    const size = useWindowSize().width;
+
 return (
-<div className="Home" id="Works" >
+<div className="Home" id="Work" >
 
     <div className="HomeGrid">
     <div className="Background">
 
-        <Bg />
+        {size > 600 ? <Bg value="400" /> : <Bg value="50"/>}
+
+
 
         <div className="HomeHeader">
             <div>
@@ -28,7 +32,7 @@ return (
         </div>
 
     <div className="ScrollDownDiv">
-    <a href="#Work">
+    <a href="#Works">
 
     <FontAwesomeIcon icon={faChevronDown} />
     </a>

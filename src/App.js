@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import './App.css';
-import Home from './components/Home/Home';
+import Main from './components/Main/Main';
 import NavBar from './components/NavBar/NavBar';
-import Work from './components/Works/Work';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -14,12 +14,9 @@ function App() {
         <div ></div> 
 </Fragment>
 
+        <Main />
 
-         <Home />
-
-    
-<Work />
-
+<Footer />
         </div>
     );
 }

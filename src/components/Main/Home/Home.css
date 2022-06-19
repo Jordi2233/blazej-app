@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Ubuntu:wght@300;400;500&display=swap');
 
 
+
 .HomeHeader {
     z-index: 10;
     display: grid;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 94vh;
     justify-content: center;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
@@ -27,6 +28,7 @@
     margin-top: -10px;
     font-family: 'Gideon Roman', cursive;
     transition: all .2s ease-in-out;
+    text-shadow: 5px 5px #41a0d9;
 }
 
 .HomeHeader p {
@@ -35,11 +37,10 @@
     text-align: center;
     letter-spacing: -3;
     transition: all .2s ease-in-out;
+
 }
 
 #tsparticles {
-    height: 100%;
-    width: 100%;
     position: absolute;
     left: 0;
     right: 0;
@@ -52,10 +53,9 @@
     width: 100vw;
     display: flex;
     justify-content: center;
-    position: absolute;
     font-size: 3em;
-    bottom: 20px; 
     animation: ScrollDown 2s ease-in-out infinite;
+    align-self: center;
 }
 
 .ScrollDownDiv a {
@@ -152,10 +152,10 @@
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 499px) {
 
     .HomeHeader {
-
+        height: 84vh;
         transition: all .2s ease-in-out;
     }
 
@@ -170,5 +170,13 @@
         font-size: 1.7em;
         transition: all .2s ease-in-out;
         margin-top: -16px;
+    }
+
+    #tsparticles {
+        height: 84vh;
+    }
+
+    .ScrollDownDiv {
+        font-size: 2em;
     }
 }

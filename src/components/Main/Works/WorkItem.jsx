@@ -1,9 +1,9 @@
 import React from "react";
-
+import useWindowSize from "../../../ScreenResolution";
 
 const WorkItem = (props) => {
 
-
+const size = useWindowSize().width;
 
 
 return (
@@ -18,19 +18,24 @@ return (
 
 <div className="WorkBtn">
 <a href={props.demo}>
-<button className="button-75"><span> Live Demo </span></button>
+<button className="button-27"><span> Demo </span></button>
 </a>
 <a href={props.git}>
-<button className="button-75"><span> GitHub </span></button>
+<button className="button-27"><span> GitHub </span></button>
 </a>
 </div>
 
+{size > 600 &&  <div className="WorkTech">
+        {props.tech}
+    </div>}
+   
 
 </div>
 
 
     <div className="WorkImg">
         <img src={props.src} alt="props.name" />
+        {size < 600 && <p className="ImgText" style={{color: props.color}}>Click me!</p>}
     </div> 
    
    

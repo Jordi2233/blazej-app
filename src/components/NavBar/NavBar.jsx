@@ -33,7 +33,7 @@ return (
 
 
 {/* <NavItem name="Home" /> */}
-<NavItem name="Works" />
+<NavItem name="Work" />
 <NavItem name="About" />
 <NavItem name="Contact" />
 </div>
