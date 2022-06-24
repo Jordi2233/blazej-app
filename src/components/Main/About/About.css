@@ -1,0 +1,175 @@
+.About {
+    padding-bottom: 100px;
+    background-color: #DCE7FC;
+    justify-content: center;
+    z-index: -2;
+}
+
+.cloud {
+
+    position: absolute;
+    z-index: 1;
+    opacity: 0.7;
+    filter: drop-shadow(1px 1px 5px rgba(143, 141, 141, 0.418));
+    transition: all .2 ease;
+}
+
+
+.AboutGrid {
+    padding-top: 80px;
+    display: grid;
+    justify-content: center;
+    z-index: 10;
+}
+
+
+.AboutHeader {
+    column-width: 100vw;
+    z-index: 10;
+    color: #1f0542;
+}
+
+
+
+.AboutHeader h2 {
+    font-family: 'Gideon Roman', cursive;
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    padding-bottom: 30px;
+    column-width: 100vw;
+}
+
+.Describe {
+    margin: 0 100px;
+    text-align: center;
+    z-index: 10;
+    color: #1f0542d0;
+    /* text-shadow: 1px 1px #1f054250; */
+}
+
+.AboutText {
+    justify-self: center;
+    text-align: left;
+    padding-bottom: 100px;
+    z-index: 10;
+}
+.AboutText p, h3 {
+    justify-content: center;
+    padding: 0 20%;
+}
+.AboutText p {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.AboutText h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.SkillsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 100px;
+}
+
+.Skills {
+    max-width: 700px;
+    width: 700px;
+    display: flex;
+    padding: 20px 0;
+    column-gap: 20px;
+    align-items: center;
+    z-index: 10;
+}
+.ProgressBar {
+ 
+    height: fit-content;
+    border-radius: 50px;
+    filter: drop-shadow(0.5px 0.5px 5px rgba(143, 141, 141));
+    transition: all 4s 1.5s ease-in;
+    z-index: 10;
+}
+
+.ProgressBar p {
+    color:rgb(25, 25, 27);
+    font-weight: 400;
+    margin: 10px 20px;
+    text-align: right;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1331px) {
+
+    .SkillsGrid {
+        margin: 0 40px;
+    }
+
+    .cloud {
+        display: none;
+    }
+  
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .About {
+        padding: 0;
+    }
+
+    .AboutGrid {
+        padding: 40px;
+    }
+
+
+    .AboutHeader h2 {
+        font-size: 2.5rem;
+        padding-bottom: 14px;
+    }
+
+    .Describe {
+        margin: 0;
+    }
+
+
+    .AboutText {
+        padding-bottom: 40px;
+    }
+
+    .AboutText p, h3 {
+        padding: 0 5%;
+    }
+
+    .AboutText p {
+        font-size: 1.2rem;
+    }
+    
+    .AboutText h3 {
+        font-size: 1.8rem;
+    }
+
+    .SkillsGrid {
+        column-gap: 0;
+    }
+    
+    .Skills {
+        flex-wrap: wrap;
+        max-width: 310px;
+        width: 300px;
+        padding: 15px 0;
+        /* justify-content: center; */
+    }
+
+    .ProgressBar {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        padding: 5px 20px;
+        transition: all 5s 1.5s ease-in;
+
+    }
+
+}

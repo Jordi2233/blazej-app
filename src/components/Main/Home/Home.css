@@ -2,19 +2,26 @@
 
 
 
+.HomeGrid {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
 .HomeHeader {
+    width: 100vw;
     z-index: 10;
     display: grid;
+    position: relative;
     margin: 0;
     padding: 0;
-    height: 94vh;
+    /* height: 94vh; */
     justify-content: center;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
+
 }
-
-
-
 
 .HomeHeader p {
     margin-top: -50px;
@@ -50,25 +57,69 @@
 }
 
 .ScrollDownDiv {
+    position: absolute;
+    bottom: 0;
     width: 100vw;
     display: flex;
     justify-content: center;
     font-size: 3em;
     animation: ScrollDown 2s ease-in-out infinite;
-    align-self: center;
+    align-self: flex-end;
 }
 
 .ScrollDownDiv a {
     color: rgb(49, 38, 38);
     text-decoration: none;
+
+
 }
+
+
 
 
 @keyframes ScrollDown {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-    40% {transform: translateY(-50px);} 
-    60% {transform: translateY(-15px);} 
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-50px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
 }
+
+.ScrollUp {
+    position: fixed;
+    bottom: 50px;
+    left: 25px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.ScrollUp a{
+    text-decoration: none;
+    color: hsl(60,4%,13%);
+    font-size: 1.1em;
+}
+
+
+.ScrollUp :hover {
+    color: hsl(228, 23%, 22%);
+    
+
+}
+
+
+
+
 
 
 @media screen and (max-width: 1500px) {
@@ -99,6 +150,7 @@
     }
 
     .HomeHeader h1 {
+        text-align: center;
         font-size: 6em;
         transition: all .2s ease-in-out;
         text-shadow: 3px 3px #41a0d9;
@@ -150,12 +202,16 @@
         transition: all .2s ease-in-out;
         margin-top: -16px;
     }
+
 }
 
 @media screen and (max-width: 499px) {
 
+    .Home {
+        height: 95vh;
+    }
+
     .HomeHeader {
-        height: 84vh;
         transition: all .2s ease-in-out;
     }
 
@@ -172,11 +228,27 @@
         margin-top: -16px;
     }
 
-    #tsparticles {
-        height: 84vh;
-    }
 
     .ScrollDownDiv {
         font-size: 2em;
+        bottom: 0;
     }
+    @media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+.Home { 
+    height: 88vh;
+}
+}}
+
+.ScrollUp {
+    position: fixed;
+    bottom: 10px;
+    left: 2%;
+}
+
+.ScrollUp a{
+
+    font-size: 1em;
+}
+
 }

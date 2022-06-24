@@ -158,8 +158,10 @@
 }
 
 
-@media screen and (max-width: 420px) {
 
+
+
+@media screen and (max-width: 420px) {
 
     .NavList {
         width: 800px;
@@ -167,33 +169,18 @@
         transition: all .5s ease-in-out;
     }
 
+    .NavLogo img {
+        display: none;
+    }
+
+
     .NavGridLinks {
-        column-gap: 14px;
+        column-gap: 20px;
         transition: all .5s ease-in-out;
     }
 
     .NavSocialList {
         column-gap: 10px;
-        transition: all .5s ease-in-out;
-    }
-
-    .NavLogo img {
-        display: none;
-    }
-
-}
-
-
-@media screen and (max-width: 400px) {
-
-
-    .NavGridLinks {
-        column-gap: 22px;
-        transition: all .5s ease-in-out;
-    }
-
-    .NavSocialList {
-        column-gap: 16px;
         transition: all .5s ease-in-out;
     }
 

@@ -6,11 +6,13 @@ import NavItem from "./NavItem";
 import NavSocial from "./NavSocial";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
-
+import useGlobalState from "../ChatBot/showChat";
 
 
 
 const NavBar = () => {
+
+  const [state, setState] = useGlobalState('state');
 
     const [colorChange, setColorchange] = useState(false);
   const changeNavbarColor = () =>{
@@ -33,9 +35,9 @@ return (
 
 
 {/* <NavItem name="Home" /> */}
-<NavItem name="Work" />
 <NavItem name="About" />
-<NavItem name="Contact" />
+<NavItem name="Works" />
+<NavItem name="Contact" click={()=> !state ? setState(true) : null} />
 </div>
 <div className="NavLogo">
     <a href="#Home">
@@ -53,7 +55,7 @@ return (
 
     </div>
 
-   
+
 
 
 </div>

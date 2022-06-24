@@ -12,12 +12,12 @@ const Home = () => {
     const size = useWindowSize().width;
 
 return (
-<div className="Home" id="Work" >
+<div className="Home" id="Home" >
 
     <div className="HomeGrid">
     <div className="Background">
 
-        {size > 600 ? <Bg value="400" /> : <Bg value="50"/>}
+        {size > 600 ? <Bg value="400" /> : <Bg value="100"/>}
 
 
 
@@ -32,10 +32,14 @@ return (
         </div>
 
     <div className="ScrollDownDiv">
-    <a href="#Works">
+    <a href="#About">
 
     <FontAwesomeIcon icon={faChevronDown} />
     </a>
+    </div>
+
+    <div className="ScrollUp">
+    <a href="#Home">Scroll Up</a>
     </div>
 
     </div>

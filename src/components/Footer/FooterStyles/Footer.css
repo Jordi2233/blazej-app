@@ -6,31 +6,36 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    background: rgb(254,250,246);
-    background: linear-gradient(0deg, rgba(254,250,246,1) 10%, rgba(220,231,252,1) 90%);
+    background: rgb(254, 250, 246);
+    background: linear-gradient(0deg, rgba(254, 250, 246, 1) 10%, rgba(220, 231, 252, 1) 90%);
+    transition: all .2s ease-in-out;
 }
 
 .FooterText {
-    width: 50vw;
+    width: 800px;
+    margin: 0 154px;
+    transition: all .2s ease-in-out;
 }
 
 .Footer h2 {
-
+    transition: all .2s ease-in-out;
     font-family: 'Gideon Roman', cursive;
 
     font-size: 3rem;
 }
 
 .Footer p {
-    font-size: 1.5rem ;
+    transition: all .2s ease-in-out;
+    font-size: 1.5rem;
     line-height: 2rem;
 
 
 }
 
-.Footer a{
+.Footer a {
+
     text-decoration: none;
-    color: hsl(60,4%,13%);
+    color: hsl(60, 4%, 13%);
     font-size: 1.5rem;
 }
 
@@ -39,7 +44,7 @@
 .Footer {
     --text: hsl(228, 23%, 22%);
     --line: hsl(231, 39%, 81%);
-    --line-active: hsl(203,67%,55%);
+    --line-active: hsl(203, 67%, 55%);
 }
 
 .Footer a {
@@ -50,6 +55,7 @@
     margin: 0 var(--spacing, 0px);
     transition: margin 0.25s;
 }
+
 .Footer a svg {
     width: 100px;
     height: 40px;
@@ -65,6 +71,7 @@
     stroke-dashoffset: 361px;
     transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
 }
+
 .Footer a:hover {
     --spacing: 4px;
     --stroke: var(--line-active);
@@ -78,4 +85,59 @@
     align-self: flex-end;
     justify-content: center;
     color: #574b409c;
+    transition: all .2s ease-in-out;
+}
+
+
+@media screen and (max-width: 1012px) {
+
+    .FooterText {
+        transition: all .2s ease-in-out;
+        width: 800px;
+        margin: 0 54px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 790px) {
+
+    .FooterText {
+        transition: all .2s ease-in-out;
+        width: 800px;
+        margin: 0 14px;
+    }
+
+
+}
+
+@media screen and (max-width: 712px) {
+
+    .Footer {
+        transition: all .2s ease-in-out;
+        height: 400px;
+    }
+
+    .FooterText h2 {
+        transition: all .2s ease-in-out;
+        font-size: 2.5rem;
+    }
+
+    .FooterText p {
+        transition: all .2s ease-in-out;
+        font-size: 1rem;
+    }
+
+    .Footer a {
+        font-size: 1.2rem;
+    }
+
+
+    .FooterR p {
+        transition: all .2s ease-in-out;
+        font-size: 1rem;
+    }
+
+
 }
