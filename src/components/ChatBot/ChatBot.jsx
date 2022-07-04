@@ -8,9 +8,9 @@ import { start, opt } from "./chat";
 import useGlobalState from "./showChat";
 
 
-const ChatBot = (props) => {
+const ChatBot = () => {
 
-// Animation on chat on and off
+
 const [anim, setAnim] = useState(Radium.keyframes(fadeInUp, 'fadeInUp'));
 const styles = {
 fadeInUp: {
@@ -18,8 +18,7 @@ animation: 'x .5s',
 animationName: anim
 },
 }
-// Hide chat
-// eslint-disable-next-line no-unused-vars
+
 const [state, setState] = useGlobalState('state');
 
 const bottomRef = useRef(null);
@@ -44,7 +43,7 @@ item.botMsg.content.map((msg) =>{ return(msg)}) }]
 
 
 useEffect(() => {
-  // 👇️ scroll to bottom every time messages change
+
   bottomRef.current?.scrollIntoView({behavior: 'smooth',  block: "start"});
 }, [allMsg]);
 

@@ -1,11 +1,1 @@
-.NavSocial a{
-    text-decoration: none;
-    color: hsl(60,4%,13%);
-    font-size: 1.3em;
-    margin-left: 20px;
-}
-
-.NavSocial a:hover {
-    color: hsl(60,4%,33%);
-
-}
+.NavSocial a{text-decoration:none;color:hsl(60,4%,13%);font-size:1.3em;margin-left:20px}.NavSocial a:hover{color:hsl(60,4%,33%)}
